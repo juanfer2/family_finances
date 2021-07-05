@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project: one
+  name: MyString
+  description: MyString
+  price_total: 1.5
+  total_paid: 1.5
+  total_dept: 1.5
+  date_pay: 2021-07-05
+  status: 1
+  number_quota: 1
+  code: 1
+  scrapping: false
+
+two:
+  project: two
+  name: MyString
+  description: MyString
+  price_total: 1.5
+  total_paid: 1.5
+  total_dept: 1.5
+  date_pay: 2021-07-05
+  status: 1
+  number_quota: 1
+  code: 1
+  scrapping: false
