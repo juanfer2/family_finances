@@ -9,5 +9,6 @@ module Types
 
     field :register_user, SuccessfulMutationType, null: true, mutation: Mutations::RegisterUser
     field :create_project, SuccessfulMutationType, null: true, mutation: Mutations::CreateProject
+    field :create_expense, SuccessfulMutationType, null: true, mutation: Mutations::CreateExpense
   end
 end

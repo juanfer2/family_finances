@@ -6,11 +6,8 @@ module Mutations
         raise GraphQL::ExecutionError.new('User do not exist')
       end
 
-      user_create_service = Projects::CreateService.new(
-        project_attributes: project_attributes.to_h,
-        current_user: context[:current_user]
-      )
-      user_create_service.call
+      Projects::CreateService.call(project_attributes: project_attributes.to_h,
+        current_user: context[:current_user])
 
       OpenStruct.new(success: true)
     rescue ActiveRecord::RecordInvalid => e

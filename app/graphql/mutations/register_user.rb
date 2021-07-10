@@ -2,8 +2,7 @@ module Mutations
   class RegisterUser < BaseMutation
     argument :user_attributes, Inputs::UserInput, required: true, description: 'Send emails to partner contact'
     def resolve(user_attributes:)
-      user_create_service = Users::CreateService.new(user_attributes: user_attributes.to_h)
-      user_create_service.call
+      Users::CreateService.call(user_attributes: user_attributes.to_h)
 
       #def authenticate_user_from_token!
       #  email = params[:email].presence
