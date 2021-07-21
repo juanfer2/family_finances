@@ -12,8 +12,11 @@
 
 ActiveRecord::Schema.define(version: 2021_07_05_161811) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "expenses", force: :cascade do |t|
-    t.integer "project_id", null: false
+    t.bigint "project_id", null: false
     t.string "name"
     t.string "description"
     t.float "price_total"
@@ -30,8 +33,8 @@ ActiveRecord::Schema.define(version: 2021_07_05_161811) do
   end
 
   create_table "project_users", force: :cascade do |t|
-    t.integer "project_id", null: false
-    t.integer "user_id", null: false
+    t.bigint "project_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["project_id"], name: "index_project_users_on_project_id"
