@@ -1,5 +1,5 @@
 class Expense < ApplicationRecord
   belongs_to :project
 
-  enum status: [:canceled, :pending, :finished]
+  enum status: [:pending, :canceled, :finished]
 end

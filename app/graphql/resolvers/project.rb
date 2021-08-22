@@ -4,7 +4,7 @@ module Resolvers
 
     def resolve(id:)
       current_user = context[:current_user]
-      current_user.projects.find(id)
+      current_user.projects.left_joins(:expenses).find(id)
     end
   end
 end

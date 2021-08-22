@@ -107,3 +107,9 @@ gem 'whenever', '0.9.7'
 gem 'active_storage_validations', '0.9.2'
 gem 'graphiql-rails', group: :development
 gem 'graphiql-rails', group: :development
+
+# Google
+gem 'googleauth', '0.15.0'
+#gem 'google-api-client', '0.53.0'
+gem 'google_drive', '3.0.6'
+gem 'google-apis-drive_v3'
